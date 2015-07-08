@@ -2,7 +2,7 @@
 Example application for the Amazon Echo to retrieve Stock Information from Yahoo
 
 
-Stocks is an example Skill for Amazon Echo. It allows you to ask for a company's stock information by company name or symbol. The project uses the Yahoo Query Language to get the results for the stock. The company must be on the NASDAQ or NYSE. Below are the steps you will need to get the Skill up and running.  
+Stocks is an example Skill for Amazon Echo. It allows you to ask for a company's stock information by company name or symbol. The project uses the Yahoo Query Language to get the results for the stock. If requesting the company by name it must be on the NASDAQ or NYSE. Any exchange can be returned by symbol. Below are the steps you will need to get the Skill up and running.  
 
 When the application starts a SpeechletServlet instance created that extends a J2EE HTTPServlet. This is used to receive requests from the Echo. The Servlet creates a Speechlet which handles the core functionality. 
 
