@@ -1,0 +1,26 @@
+{
+  "intents": [
+    {
+      "intent": "StockCompanyName",
+      "slots": [
+      {
+          "name": "CompanyName",
+          "type": "LITERAL"
+        }
+
+      ]
+    },
+
+ {
+      "intent": "StockTickerName",
+      "slots": [
+ {
+          "name": "Ticker",
+          "type": "LITERAL"
+        }
+
+
+]
+    }
+  ]
+}

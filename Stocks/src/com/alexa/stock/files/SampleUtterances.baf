@@ -1,0 +1,9 @@
+StockCompanyName What's the stock price for company {Apple | CompanyName}
+StockCompanyName What's the stock price for company   {Google | CompanyName}
+StockCompanyName What's the stock price for company  {Facebook | CompanyName}
+StockCompanyName What's the stock price for company   {Microsoft | CompanyName}
+
+
+StockTickerName What's the stock price for symbol  {A | Symbol} {A | Symbol} {P| Symbol} {L | Symbol}
+StockTickerName What's the stock price for symbol   {G | Symbol} {O | Symbol} {O| Symbol} {G| Symbol} {L| Symbol} 
+StockTickerName What's the stock price for symbol   {F | Symbol}
