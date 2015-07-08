@@ -78,7 +78,7 @@ public class StockUtils
     
     
     
-	public static String getStockInformationForCompanyName(String companyName, String ticker) throws StockException {
+	public static String getStockInformation(String companyName, String ticker) throws StockException {
 		
 		String voiceResponse = null;
 		 
@@ -89,18 +89,18 @@ public class StockUtils
     	
     	if(companyName != null) {
     	log.info("Company name {}, Doing a search", companyName);
-         filteredSymbols = filteredSymbols(getStockTicker(companyName).getResult(), validExchanges);
+         filteredSymbols = filteredSymbols(getStockSymbolFromCompanyName(companyName).getResult(), validExchanges);
     	} 
     	
     	if(filteredSymbols != null && filteredSymbols.size() == 1) {
             log.info("Getting the first stock returned");
-    		voiceResponse = quoteInformation(getStockInformation(filteredSymbols.get(0).getSymbol()));
+    		voiceResponse = quoteInformation(getStockInformationForSymbol(filteredSymbols.get(0).getSymbol()));
     	} else if (filteredSymbols != null && filteredSymbols.size() > 1) {	    
     		//Alert the user of the multiple tickers.
-    		voiceResponse = multipleResponse(filteredSymbols);    		
+    		voiceResponse = multipleResultResponse(filteredSymbols);    		
     		log.info("Found multiple symbols alert user");
     	} else if (companyName == null && ticker != null) { //We only have Symbol
-    		voiceResponse = quoteInformation(getStockInformation(ticker));
+    		voiceResponse = quoteInformation(getStockInformationForSymbol(ticker));
     		log.info("Looking for symbol infomation for symbol{}", ticker);
 
     	} else {
@@ -136,7 +136,7 @@ public class StockUtils
 	     * @param multipleResults
 	     * @return
 	     */
-	    public static String multipleResponse(List<Result> multipleResults) {
+	    public static String multipleResultResponse(List<Result> multipleResults) {
 	    	
 	    	String response = multipleResultsFound;
 	    		for(Result quoteResult : multipleResults) {
@@ -180,7 +180,7 @@ public class StockUtils
      * @return
      * @throws StockException
      */
-    public static ResultSet getStockTicker(String companyName) throws StockException {
+    public static ResultSet getStockSymbolFromCompanyName(String companyName) throws StockException {
     	
    	    String query;
 		try {
@@ -202,12 +202,12 @@ public class StockUtils
     /**
      * Query to the YQL API to retrieve information based on stock ticker.
      * We call the generic getRESTResource method
-     * @param ticker
+     * @param symbol
      * @return
      */
-    public static Quote getStockInformation(String ticker)  throws StockException {
+    public static Quote getStockInformationForSymbol(String symbol)  throws StockException {
     	
-    	String query = "select * from yahoo.finance.quotes where symbol = \"" + ticker +
+    	String query = "select * from yahoo.finance.quotes where symbol = \"" + symbol +
     		"\"&format=json&diagnostics=true&env=store://datatables.org/alltableswithkeys&callback=";
     	
 		String response = null;

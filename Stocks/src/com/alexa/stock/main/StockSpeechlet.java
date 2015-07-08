@@ -85,10 +85,10 @@ public class StockSpeechlet implements Speechlet {
     	
     	if(StockCompanyNameIntent.equals(intent.getName())) { //We matched a request for stock information by company name
     		log.info("Intent intent{}, CompanyNameSlot{} ", intent.getName(), intent.getSlot(CompanyNameSlot).getValue());
-    		speechOutput = StockUtils.getStockInformationForCompanyName(intent.getSlot(CompanyNameSlot).getValue(), null);
-    	} else if (StockSymbolNameIntent.equals(intent.getName())) { //We matched a request for stock infomation by symbol name
+    		speechOutput = StockUtils.getStockInformation(intent.getSlot(CompanyNameSlot).getValue(), null);
+    	} else if (StockSymbolNameIntent.equals(intent.getName())) { //We matched a request for stock information by symbol name
     		log.info("Intent intent{}, tickerSlot{} ", intent.getName(), intent.getSlot(SymbolSlot).getValue());
-    		speechOutput = StockUtils.getStockInformationForCompanyName(null, StockUtils.formatSymbol(intent.getSlot(SymbolSlot).getValue()));
+    		speechOutput = StockUtils.getStockInformation(null, StockUtils.formatSymbol(intent.getSlot(SymbolSlot).getValue()));
     	} else {
     		log.info("Unkown intent");
     		speechOutput = stockQuestionNotUnderstood;

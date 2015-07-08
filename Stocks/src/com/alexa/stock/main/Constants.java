@@ -13,7 +13,7 @@ public interface Constants {
 	
 	
 //Voice related	
-	static String introSpeechOutput = "Welcome to stocks. You can get stock information by company name or symbol on the NASDAQ and New York Stock Exchange";
+	static String introSpeechOutput = "Welcome to stocks. You can get stock information by company name on the NASDAQ and New York Stock Exchange. Or by symbol for any exchange.";
 	static String stockError = "An error occured retrieving information for stocks";
 	static String stockQuestionNotUnderstood = "I'm unable to understand that question. Please try again";
 	static String multipleResultsFound = "We found multiple symbols. Please ask again with one of the specific tickers found.";
