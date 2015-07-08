@@ -12,10 +12,10 @@
     },
 
  {
-      "intent": "StockTickerName",
+      "intent": "StockSymbolName",
       "slots": [
  {
-          "name": "Ticker",
+          "name": "Symbol",
           "type": "LITERAL"
         }
 
