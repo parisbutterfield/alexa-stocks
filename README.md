@@ -12,7 +12,11 @@ https://developer.amazon.com/public/solutions/alexa/alexa-skills-kit/docs/defini
 
 Stocks has two intents StockCompanyName and StockSymbolName, which have slots CompanyName and Symbol.
 
-For a walkthrough of the project and demo please watch the YouTube video <insert-video-link>.
+For a walkthrough of the project and demo please watch the YouTube video
+
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=t0YMYzuEOHg
+" target="_blank"><img src="http://img.youtube.com/vi/t0YMYzuEOHg/0.jpg" 
+alt="IMAGE ALT TEXT HERE" width="480" height="360" border="10" /></a>
 
 ###Prerequisites:
 * AWS ToolKit for Eclipse
@@ -57,13 +61,21 @@ http://docs.aws.amazon.com/IAM/latest/UserGuide/ManagingServerCerts.html
 From the Amazon developer console.
 
 Define the endpoint https://elastibeanstalk-hostname**/stocks**
-
-
+![endpoint](https://raw.githubusercontent.com/parisbutterfield/alexa-stocks/master/screenshots/endpoint.png
+)
 
 Open the cert generated in the previous step and copy/paste it.
-
+![cert](https://raw.githubusercontent.com/parisbutterfield/alexa-stocks/master/screenshots/cert.png
+)
 
 Also copy the contents of IntentSchema.json and SampleUtterances.baf into Intent Schema and Sample Utterances respectively.
+
+![schema](https://raw.githubusercontent.com/parisbutterfield/alexa-stocks/master/screenshots/schema.png
+)
+
+And finally
+![readytest](https://raw.githubusercontent.com/parisbutterfield/alexa-stocks/master/screenshots/readytest.png
+)
 
 
 
