@@ -36,8 +36,8 @@ Update the src/AwsCredentials.properties in the project with your secretKey and 
 http://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSGettingStartedGuide/AWSCredentials.html
 
 #Deploying the Application
-
-Right-clicking on the project you will be able to deploy to a AWS Elastic Beanstalk‎ instance. This will only work if you installed the AWS ToolKit for Eclipse.
+Follow the instructions listed in the link below.  http://docs.aws.amazon.com/elasticbeanstalk/latest/dg/create_deploy_Java.sdlc.html
+Right-clicking on the project you will be able to deploy to a AWS Elastic Beanstalk‎ instance. Select Tomcat 8. This will only work if you installed the AWS ToolKit for Eclipse.
 
 Alternatively you can generate the war using the command below and deploy the war to your servlet container like Tomcat.
 
@@ -59,10 +59,13 @@ From the Amazon developer console.
 Define the endpoint https://elastibeanstalk-hostname**/stocks**
 
 
+
 Open the cert generated in the previous step and copy/paste it.
 
 
 Also copy the contents of IntentSchema.json and SampleUtterances.baf into Intent Schema and Sample Utterances respectively.
+
+
 
 #Test it!
 From your Amazon Echo say:
